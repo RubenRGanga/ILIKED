@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "63b47297d438118df7e60aa3"
+  },
+  "cast": [
+    "Catinca Untaru",
+    "Lee Pace",
+    "Justine Waddell"
+  ],
+  "director": "Tarsem Singh",
+  "o_title": "The Fall",
+  "title": "The Fall. El sueño de Alexandria",
+  "url_imdb": "https://www.imdb.com/title/tt0460791/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BMjAzODUwMjM1M15BMl5BanBnXkFtZTcwNjU2MjU2MQ@@._V1_.jpg",
+  "year": 2006,
+  "url_video": "https://youtu.be/OTn5XUFP_iA",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63b46ca5d438118df7e60aa1\n",
+      "username": "Colector",
+      "comentary": "Siempre pienso en esta película como una experiencia, visualmente me hace plantear como algo puede ser realista y fantástico al mismo tiempo, habla de la fragilidad de la inocencia, de lo subjetivo de la perspectiva y convierte todo en algo mágico que funciona por si solo y en conjunto. Un apunte, siempre recomiendo verla en la mejor calidad posible y en VO, ya que la forma en la que hablan los personajes en el idioma original es parte de la narrativa misma.",
+      "comentary_t": "Imágenes en movimiento que cuentan una historia, mágica.",
+      "date": {
+        "$date": {
+          "$numberLong": "1672781880000"
+        }
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63b83ff7d438118df7e60ac1"
+  },
+  "cast": [
+    "Cristina Sánchez Pascual",
+    "Will More",
+    "Laura Cepeda"
+  ],
+  "director": "Pedro Almodóvar",
+  "o_title": "Entre tinieblas",
+  "title": "Entre tinieblas",
+  "url_imdb": "https://www.imdb.com/title/tt0085496/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BYWVjNTAyY2MtODZiYi00MTNmLTliZmUtZDU3OTUxODYwMjkzXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_FMjpg_UX1000_.jpgview-source:https://www.imdb.com/title/tt0085496/mediaviewer/rm2284971776/?ref_=tt_ov_i",
+  "year": 1983,
+  "url_video": "https://youtu.be/9qUkrgKbhDc",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63b83dfad438118df7e60abf",
+      "username": "Aleruifer",
+      "comentary": "Entre tinieblas de Almodovar es para mi su mejor película, por lo loca y psicodélica. Me gusta su aspereza, la forma en que mezcla tipo de técnicas narrativas para contar su historia y la elegancia con la que mezcla historias del presente y del pasado. Es un espectáculo melodramático, pero uno bueno que juega a ser malo sin ser exagerado o que se esfuerza mucho para lograrlo. Me fascina lo fácil que es para esta película ser a la vez divertida y seria. Admiro la forma en la que la película te hace formar parte del convento, como si fueses un habitante más. ",
+      "comentary_t": "Psicodelia underground y monjas. "
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63b847320c230ebda2f40bf8"
+  },
+  "cast": [
+    "Edith 'Little Edie' Bouvier Beale",
+    "Edith Bouvier Beale",
+    "Brooks Hyers"
+  ],
+  "director": "Ellen Hovde, Albert Maysles, David Maysles, Muffie Meyer",
+  "o_title": "Grey Gardens",
+  "title": "Grey Gardens",
+  "url_imdb": "https://www.imdb.com/title/tt0073076/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BNjQ0YzYwMzUtZjc5NS00OGQ3LWJjMmUtYmY5N2M3ZTA0NTY2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+  "year": 1975,
+  "url_video": "https://youtu.be/5HNhlry-ggg",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63b83dfad438118df7e60abf",
+      "username": "Aleruifer",
+      "comentary": "Este documental es un poema perfecto sobre la decandencia. Las dos protagonistas te hacen un house tour completo, no solo te mostrarán una mansión en absoluta ruina, sino los seres, los sueños, las peleas y los delirios de las personas que lo habitan. Protagonistas totalmente atrapadas en el pasado y en una realidad que nunca ocurrirá para ellas. Ricos en decadencia es algo que me fascina y si es en forma de reality mejor. Durante el documental es facil perder el foco y dejarrte llevar como si de ficción se tratase. ",
+      "comentary_t": "Vivir en el pasado."
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63b84aef0c230ebda2f40c03"
+  },
+  "cast": [
+    "Mia Goth",
+    "David Corenswet",
+    "Tandi Wright"
+  ],
+  "director": "Ti West",
+  "o_title": "Pearl",
+  "title": "Pearl",
+  "url_imdb": "https://www.imdb.com/title/tt18925334/?ref_=nv_sr_srsg_0",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BZTFkNmE5MjUtZDE1Yi00ZmQyLTk2YWUtN2EwODA1ZmNlOTA5XkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_FMjpg_UX1000_.jpg",
+  "year": 2022,
+  "url_video": "https://youtu.be/L5PW5r3pEOg",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63b83dfad438118df7e60abf",
+      "username": "Aleruifer",
+      "comentary": "Esta película me atrapó desde el primer minuto. Tiene todo lo que me gusta: chicas locas, technicolor, sangre, un poco de la estética del western y diálogos propios del cine de serie b más ochentero. Pearl nos lleva de paseo por su mundo de imaginación, miseria y decepciones. Incluso consigue que podamos comprender y conectar con el porqué de su locura y sed de sangre; una antiheroína simpática y enigmática. ¡Muy recomendada!",
+      "comentary_t": "Technicolor sangriento y serie b."
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63b84f7f0c230ebda2f40c06"
+  },
+  "cast": [
+    "Lucía Pollán",
+    "Luis Bermejo",
+    "José Sacristán"
+  ],
+  "director": "Carlos Vermut",
+  "o_title": "Magical Girl",
+  "title": "Magical Girl",
+  "url_imdb": "https://www.imdb.com/title/tt3089326/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BNmFkYzQ2MWItM2NkOS00OGFkLThlNjEtOWI5YzVlOTMzY2VmXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_FMjpg_UX1000_.jpg",
+  "year": 2014,
+  "url_video": "https://youtu.be/_YIO5X2xKUE",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63b83dfad438118df7e60abf",
+      "username": "Aleruifer",
+      "comentary": "Me encanta esta película porque me atrapa y me deja hipnitzada con los personajes y las tramas. Si te gustan las películas con tramas cerradas, donde todo encaja como piezas de puzzle, no la recomiendo. Valoro la elegancia con la que el director deja espacios sin rellenar en la trama obligando a que tu imaginación trabaje. Los personajes son misteriosos y me pareció un film muy poético.",
+      "comentary_t": "Misterio y anime de Carlos Vermút"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bb1417d438118df7e60ae7"
+  },
+  "cast": [
+    "Sunny Suljic",
+    "Katherine Waterston",
+    "Na-kel Smith"
+  ],
+  "director": "Jonah Hill",
+  "o_title": "Mid90s",
+  "title": "En los 90",
+  "url_imdb": "https://www.imdb.com/title/tt5613484/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BZDhjNDQ0MjEtNWZhMy00ZTY1LWFkYmQtMWYwNDliNGQ1MWU2XkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_FMjpg_UX1000_.jpg",
+  "year": 2018,
+  "url_video": "https://youtu.be/_YIO5X2xKUE",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63bb11d1d438118df7e60ae5",
+      "username": "SaúlIbáñez",
+      "comentary": "Una de las mejores películas que he visto sobre la salida de la niñez y la entrada en la adolescencia (junto a 'Fucking Åmål' y 'This Is England', que yo recuerde). Pocas veces se hacen películas así, donde todo se mira desde la perspectiva del niño-adolescente, sin caer en el paternalismo o el alarmismo adulto, con verdadero respeto y cariño. Aquí casi no hay personajes de más de dieciocho años, nos metemos de verdad en el viaje de Stevie de su mano y de nadie más. Tampoco hay explicaciones forzadas ni diálogos acartonados. Lo que sí hay es una forma de rodar directa, sin efectismos ni subrayados, logrando lo poético sin proponérselo, lo emocionante sin caer en lo lacrimógeno. Además, hay una confianza real en lo que se está contando, por lo que Hill (también el guionista) se salta los giros de guion sorprendentes, el suspense metido con calzador, porque no le hace falta.\nLa banda sonora la firma el legendario Trent Reznor junto a Atticus Ross, cuando no tira de canciones de esos años.\n¡Y es una primera película!",
+      "comentary_t": "!"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bb194ad438118df7e60ae9"
+  },
+  "cast": [
+    "Lola Dueñas",
+    "Anna Castillo",
+    "Noemí Hopper"
+  ],
+  "director": "Celia Rico Clavellino",
+  "o_title": "Viaje al cuarto de una madre",
+  "title": "Viaje al cuarto de una madre",
+  "url_imdb": "https://www.imdb.com/title/tt6109502",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BZGQ3ZTA0ZGItYmZmZS00YjYyLWE2YTItYThiOTdiZDk2YTJmXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_FMjpg_UX1000_.jpg",
+  "year": 2018,
+  "url_video": "https://youtu.be/dGTBXjXBE68",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63bb11d1d438118df7e60ae5",
+      "username": "SaúlIbáñez",
+      "comentary": "Una maravilla inesperada, contenida, que me ha sacado alguna lágrima. Sorprende que una primera película tenga un discurso tan bien construido y sea tan elegante y serena.",
+      "comentary_t": "!"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bb1bacd438118df7e60aeb"
+  },
+  "cast": [
+    "Eusebio Poncela",
+    "Cecilia Roth",
+    "Will More"
+  ],
+  "director": "Iván Zulueta",
+  "o_title": "Arrebato",
+  "title": "Arrebato",
+  "url_imdb": "https://www.imdb.com/title/tt0078797/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BYTQwMzEyNGQtOWZlNy00MDFkLWI5MWQtZWM2ZWZjN2Y1MzgyXkEyXkFqcGdeQXVyMjc4MjcxNzI@._V1_FMjpg_UX1000_.jpg",
+  "year": 1979,
+  "url_video": "https://youtu.be/ONHTMRV8lmo",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63bb11d1d438118df7e60ae5",
+      "username": "SaúlIbáñez",
+      "comentary": "No deja de sorprenderme que un tipo con poquísima experiencia y menos medios hiciera una cosa como esta en una España tan convulsa, costumbrista, provinciana y literal (¿ahora es diferente?). Una de las mejores reflexiones sobre la creación artística, el vampirismo del arte y la entrega del artista a algo mayor que él.",
+      "comentary_t": "!"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bb1f40d438118df7e60aed"
+  },
+  "cast": [
+    "Margarita Terekhova",
+    "Filipp Yankovskiy",
+    "Oleg Yankovskiy"
+  ],
+  "director": "Andrei Tarkovsky",
+  "o_title": "Zerkalo",
+  "title": "El espejo",
+  "url_imdb": "https://www.imdb.com/title/tt0072443/",
+  "url_img": "https://m.media-amazon.com/images/M/MV5BOGRiNDc0ZmMtZWVmNS00ZmRkLWEwNjQtODdmYTIyZGJjMjc5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+  "year": 1975,
+  "url_video": "https://youtu.be/S2U9TXmYJ94",
+  "comments": [
+    {
+      "likes": 0,
+      "n": 1,
+      "user_id": "63bb11d1d438118df7e60ae5",
+      "username": "SaúlIbáñez",
+      "comentary": "Cuando vi esta película todos mis esquemas cambiaron completamente y para siempre. Me encontré ante algo tan radicalmente diferente y alejado de lo que yo pensaba que era el cine (que tampoco era ni es demasiado) que caí rendido por completo. El poder de las imágenes de 'El espejo' es enorme, inacabable; toda la película transmite un estado de levitación, de estar en otro mundo, otra realidad. Durante mucho tiempo la veía una y otra vez, con obsesión. Y todavía ahora la veo con frecuencia, y siempre encuentro algo nuevo. Es posible que sea la película más bonita del mundo (perdón por ser tan tajante). Dicho todo esto, es posible que la película final de Tarkovski, 'Sacrificio', tuviera que estar compartiendo esta posición.",
+      "comentary_t": "!"
+    }
+  ]
+}]

@@ -1,0 +1,202 @@
+[{
+  "_id": {
+    "$oid": "63b46ca5d438118df7e60aa1"
+  },
+  " comments": [
+    {
+      "artwork_id": "63b47297d438118df7e60aa3\n",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1672781880000"
+        }
+      },
+      "comentary": "Siempre pienso en esta película como una experiencia, visualmente me hace plantear como algo puede ser realista y fantástico al mismo tiempo, habla de la fragilidad de la inocencia, de lo subjetivo de la perspectiva y convierte todo en algo mágico que funciona por si solo y en conjunto. Un apunte, siempre recomiendo verla en la mejor calidad posible y en VO, ya que la forma en la que hablan los personajes en el idioma original es parte de la narrativa misma.",
+      "comentary_t": "Imágenes en movimiento que cuentan una historia, mágica.",
+      "artwork_title": "The Fall. El sueño de Alexandria"
+    }
+  ],
+  "_password": "1l1k3d",
+  "email": "rubenruizganga@gmail.com",
+  "reg_Date": {
+    "$date": {
+      "$numberLong": "1672786800000"
+    }
+  },
+  "url_user_img": "https://ca.slack-edge.com/T036N4PSM8X-U0428AV50J0-88a054519b62-512",
+  "username": "Colector"
+},{
+  "_id": {
+    "$oid": "63b83dfad438118df7e60abf"
+  },
+  " comments": [
+    {
+      "artwork_id": "63b83ff7d438118df7e60ac1",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673023800000"
+        }
+      },
+      "comentary": "Entre tinieblas de Almodovar es para mi su mejor película, por lo loca y psicodélica. Me gusta su aspereza, la forma en que mezcla tipo de técnicas narrativas para contar su historia y la elegancia con la que mezcla historias del presente y del pasado. Es un espectáculo melodramático, pero uno bueno que juega a ser malo sin ser exagerado o que se esfuerza mucho para lograrlo. Me fascina lo fácil que es para esta película ser a la vez divertida y seria. Admiro la forma en la que la película te hace formar parte del convento, como si fueses un habitante más. ",
+      "comentary_t": "Psicodelia underground y monjas.",
+      "artwork_title": "Entre Tinieblas"
+    },
+    {
+      "artwork_id": "63b847320c230ebda2f40bf8",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673023800000"
+        }
+      },
+      "comentary": "Este documental es un poema perfecto sobre la decandencia. Las dos protagonistas te hacen un house tour completo, no solo te mostrarán una mansión en absoluta ruina, sino los seres, los sueños, las peleas y los delirios de las personas que lo habitan. Protagonistas totalmente atrapadas en el pasado y en una realidad que nunca ocurrirá para ellas. Ricos en decadencia es algo que me fascina y si es en forma de reality mejor. Durante el documental es facil perder el foco y dejarrte llevar como si de ficción se tratase. ",
+      "comentary_t": "Vivir en el pasado.",
+      "artwork_title": "Grey Gardens"
+    },
+    {
+      "artwork_id": "63b84aef0c230ebda2f40c03",
+      "n": 1,
+      "likes": 0,
+      "date": "2023-01-06T16:50:00.000+00:00",
+      "comentary": "Esta película me atrapó desde el primer minuto. Tiene todo lo que me gusta: chicas locas, technicolor, sangre, un poco de la estética del western y diálogos propios del cine de serie b más ochentero. Pearl nos lleva de paseo por su mundo de imaginación, miseria y decepciones. Incluso consigue que podamos comprender y conectar con el porqué de su locura y sed de sangre; una antiheroína simpática y enigmática. ¡Muy recomendada!",
+      "comentary_t": "Technicolor sangriento y serie b.",
+      "artwork_title": "Pearl"
+    },
+    {
+      "artwork_id": "63b84f7f0c230ebda2f40c06",
+      "comentary": "Me encanta esta película porque me atrapa y me deja hipnitzada con los personajes y las tramas. Si te gustan las películas con tramas cerradas, donde todo encaja como piezas de puzzle, no la recomiendo. Valoro la elegancia con la que el director deja espacios sin rellenar en la trama obligando a que tu imaginación trabaje. Los personajes son misteriosos y me pareció un film muy poético.",
+      "comentary_t": "Misterio y anime de Carlos Vermút",
+      "date": "2023-01-06T16:50:00.000+00:00",
+      "likes": 0,
+      "n": 1,
+      "artwork_title": "Magical Girl"
+    }
+  ],
+  "_password": "clave123",
+  "email": "alejandraruif@gmail.com",
+  "reg_Date": {
+    "$date": {
+      "$numberLong": "1673046000000"
+    }
+  },
+  "url_user_img": "https://raw.githubusercontent.com/RubenRGanga/iliked/main/assets/userImg/alejandra.png",
+  "username": "Aleruifer"
+},{
+  "_id": {
+    "$oid": "63b85edcd438118df7e60ae0"
+  },
+  " comments": [
+    {
+      "artwork_id": "",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673023800000"
+        }
+      },
+      "comentary": "",
+      "comentary_t": ""
+    },
+    {
+      "artwork_id": "",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673023800000"
+        }
+      },
+      "comentary": "",
+      "comentary_t": ""
+    },
+    {
+      "artwork_id": "63b84aef0c230ebda2f40c03",
+      "n": 1,
+      "likes": 0,
+      "date": "2023-01-06T16:50:00.000+00:00",
+      "comentary": "",
+      "comentary_t": ""
+    },
+    {
+      "artwork_id": "",
+      "comentary": "",
+      "comentary_t": "",
+      "date": "2023-01-06T16:50:00.000+00:00",
+      "likes": 0,
+      "n": 1
+    }
+  ],
+  "_password": "pelisrg",
+  "email": "poesianecesaria@gmail.com",
+  "reg_Date": {
+    "$date": {
+      "$numberLong": "1673031000000"
+    }
+  },
+  "url_user_img": "https://github.com/RubenRGanga/iliked/blob/main/assets/userImg/carmen.jpg?raw=true",
+  "username": "MCcarmen"
+},{
+  "_id": {
+    "$oid": "63bb11d1d438118df7e60ae5"
+  },
+  " comments": [
+    {
+      "artwork_id": "63bb1417d438118df7e60ae7",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673208000000"
+        }
+      },
+      "comentary": "Una de las mejores películas que he visto sobre la salida de la niñez y la entrada en la adolescencia (junto a 'Fucking Åmål' y 'This Is England', que yo recuerde). Pocas veces se hacen películas así, donde todo se mira desde la perspectiva del niño-adolescente, sin caer en el paternalismo o el alarmismo adulto, con verdadero respeto y cariño. Aquí casi no hay personajes de más de dieciocho años, nos metemos de verdad en el viaje de Stevie de su mano y de nadie más. Tampoco hay explicaciones forzadas ni diálogos acartonados. Lo que sí hay es una forma de rodar directa, sin efectismos ni subrayados, logrando lo poético sin proponérselo, lo emocionante sin caer en lo lacrimógeno. Además, hay una confianza real en lo que se está contando, por lo que Hill (también el guionista) se salta los giros de guion sorprendentes, el suspense metido con calzador, porque no le hace falta.\nLa banda sonora la firma el legendario Trent Reznor junto a Atticus Ross, cuando no tira de canciones de esos años.\n¡Y es una primera película!",
+      "comentary_t": "!",
+      "artwork_title": "Mid90s"
+    },
+    {
+      "artwork_id": "63bb194ad438118df7e60ae9",
+      "n": 1,
+      "likes": 0,
+      "date": {
+        "$date": {
+          "$numberLong": "1673035200000"
+        }
+      },
+      "comentary": "Una maravilla inesperada, contenida, que me ha sacado alguna lágrima. Sorprende que una primera película tenga un discurso tan bien construido y sea tan elegante y serena.",
+      "comentary_t": "!",
+      "artwork_title": "Viaje al cuarto de una madre"
+    },
+    {
+      "artwork_id": "63bb1bacd438118df7e60aeb",
+      "n": 1,
+      "likes": 0,
+      "date": "2023-01-06T20:00:00.000+00:00",
+      "comentary": "No deja de sorprenderme que un tipo con poquísima experiencia y menos medios hiciera una cosa como esta en una España tan convulsa, costumbrista, provinciana y literal (¿ahora es diferente?). Una de las mejores reflexiones sobre la creación artística, el vampirismo del arte y la entrega del artista a algo mayor que él.",
+      "comentary_t": "!",
+      "artwork_title": "Arrebato"
+    },
+    {
+      "artwork_id": "63bb1f40d438118df7e60aed",
+      "comentary": "Cuando vi esta película todos mis esquemas cambiaron completamente y para siempre. Me encontré ante algo tan radicalmente diferente y alejado de lo que yo pensaba que era el cine (que tampoco era ni es demasiado) que caí rendido por completo. El poder de las imágenes de 'El espejo' es enorme, inacabable; toda la película transmite un estado de levitación, de estar en otro mundo, otra realidad. Durante mucho tiempo la veía una y otra vez, con obsesión. Y todavía ahora la veo con frecuencia, y siempre encuentro algo nuevo. Es posible que sea la película más bonita del mundo (perdón por ser tan tajante). Dicho todo esto, es posible que la película final de Tarkovski, 'Sacrificio', tuviera que estar compartiendo esta posición.",
+      "comentary_t": "!",
+      "date": "2023-01-06T20:00:00.000+00:00",
+      "likes": 0,
+      "n": 1,
+      "artwork_title": "El espejo"
+    }
+  ],
+  "_password": "dalia123",
+  "email": "!",
+  "reg_Date": {
+    "$date": {
+      "$numberLong": "1673203800000"
+    }
+  },
+  "url_user_img": "https://scontent.fsvq1-2.fna.fbcdn.net/v/t1.6435-9/176125013_10222793475719394_7545089267499364364_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=H16F5t_4bcoAX9ojWnE&_nc_ht=scontent.fsvq1-2.fna&oh=00_AfBiEmjPjaXDX64vSFhDNCuTOlzyfqW8_wMq2lPEAcc_LA&oe=63E28037",
+  "username": "SaúlIbáñez"
+}]
