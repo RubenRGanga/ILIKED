@@ -1,7 +1,7 @@
 //RUTAS DE USERS
 
-const Films = require('../models/user_model')
 const express = require('express')
+const winston = require('winston/lib/winston/config')
 const Users = require('../models/user_model')
 const router = express.Router()
 
@@ -10,6 +10,21 @@ router.get('/all', async (req, res) => {
     
     res.send (await Users.find({}))
     
+})
+
+//CREAR NUEVO USUARIO
+router.post('/create', async (req, res) => {
+    const user = new Users(req.body) 
+    const newUser = await user.save()
+    res.send(newUser)
+    winston.info('Nuevo/a usuario/a en la la base de datos.')
+})
+
+//EDITAR USUARIO
+router.put('/edit/:username', async (req, res) => {
+    const film = await Films.findOneAndUpdate({id: req.params.username}, req.body)
+    res.send(film)
+    winston.info(`Editado: ${req.params.username}`)
 })
 
 
