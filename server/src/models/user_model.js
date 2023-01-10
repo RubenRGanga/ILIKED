@@ -2,6 +2,8 @@
 
 const mongoose = require('mongoose');
 const Joi = require('joi')
+const validator = require("../middleware/joiValidator");
+const _ = require("lodash");
 
 const commentsSchema = new mongoose.Schema({
     artwork_id: String, 
@@ -14,9 +16,21 @@ const commentsSchema = new mongoose.Schema({
 })
 
 const usersSchema = new mongoose.Schema({
-    username: String,
-    email: String,
-    _password: String,
+    username: {
+        type: String,
+        required: true,
+        unique:true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique:true,
+    },
+    _password: {
+        type: String,
+        required: true,
+        unique:true,
+    },
     url_user_img: String,
     reg_Date: Date,
     comments: [commentsSchema]
@@ -39,9 +53,16 @@ function validateComments(comments){
 
 function validateUsers(users){
     const schema = Joi.object({
-        username: Joi.string(),
-        email: Joi.string(),
-        _password: Joi.string(),
+        username: Joi.string()
+        .required()
+        .messages({ "any.required": `El nombre de usuario no es valido o está incompleto.` }),
+        email: Joi.string()
+        .email()
+        .required()
+        .messages({ "any.required": `El e-mail no es valido o está incompleto.` }),
+        _password: Joi.string()
+        .required()
+        .messages({ "any.required": `La contraseña no es valida o está incompleta` }),
         url_user_img: Joi.string(),
         reg_Date: Joi.date(),
         comments: [validateComments]

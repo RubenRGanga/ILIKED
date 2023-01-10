@@ -2,6 +2,7 @@
 
 const  Comentaries = require('../models/comentary_model')
 const express = require('express')
+const winston = require('winston')
 const router = express.Router()
 
 
@@ -16,14 +17,7 @@ router.post('/create', async (req, res) => {
     const comentary = new Comentaries(req.body) 
     const newComentary = await comentary.save()
     res.send(newComentary)
-    console.log('Nuevo comentario añadido a la base de datos.')
-})
-
-//CREAR UN NUEVO COMENTARIO EN FILMS
-router.put('/edit/:artwork_title', async (req, res) => {
-    const film = await Films.findOneAndUpdate({id: req.params.artwork_title}, req.body)
-    res.send(film)
-    console.log(`Editado: ${req.params.artwork_title}`)
+    winston.info('Nuevo comentario añadido a la base de datos.')
 })
 
 module.exports = router
