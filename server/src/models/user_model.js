@@ -3,22 +3,39 @@
 const mongoose = require('mongoose');
 const Joi = require('joi')
 
+const commentsSchema = new mongoose.Schema({
+    artwork_id: String, 
+    artwork_title: String,
+    comentary_t: String,
+    comentary: String,
+    date: Date,
+    likes: Number,
+    n: Number
+})
+
 const usersSchema = new mongoose.Schema({
     username: String,
     email: String,
     _password: String,
     url_user_img: String,
     reg_Date: Date,
-    comments: [{    "artwork_title": String, 
-                    "artwork_id": String,
-                    "comentary_t": String,
-                    "comentary": String,
-                    "date": Date,
-                    "likes": Number,
-                    "n": Number
-                }]
+    comments: [commentsSchema]
 
 });
+
+function validateComments(comments){
+    const schema = Joi.object({
+    artwork_id: Joi.string(),
+    artwork_title: Joi.string(),  
+    comentary_t: Joi.string(),
+    comentary: Joi.string(),
+    date: Joi.date(),
+    likes: Joi.number(),
+    n: Joi.number()
+    })
+
+    return schema.validate(comments)
+}
 
 function validateUsers(users){
     const schema = Joi.object({
@@ -27,14 +44,7 @@ function validateUsers(users){
         _password: Joi.string(),
         url_user_img: Joi.string(),
         reg_Date: Joi.date(),
-        comments: [{    "artwork_title": Joi.string(), 
-                        "artwork_id": Joi.string(),
-                        "comentary_t": Joi.string(),
-                        "comentary": Joi.string(),
-                        "date": Joi.date(),
-                        "likes": Joi.number(),
-                        "n": Joi.number()
-                    }]
+        comments: [validateComments]
     })
 
     return schema.validate(users)
