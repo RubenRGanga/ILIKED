@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "ILIKED_JWT_KEY",
+  "db": "MONGO_URI"
+}

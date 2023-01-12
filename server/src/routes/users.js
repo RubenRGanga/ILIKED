@@ -2,7 +2,8 @@
 
 const express = require('express')
 const winston = require('winston')
-const Users = require('../models/user_model')
+const bcrypt = require("bcrypt");
+const {Users} = require('../models/user_model')
 const router = express.Router()
 
 
@@ -14,9 +15,20 @@ router.get('/all', async (req, res) => {
 
 //CREAR NUEVO USUARIO
 router.post('/create', async (req, res) => {
-    const user = new Users(req.body) 
+    let user = await Users.findOne({$or: [{username: req.body.username}, {email: req.body.email}]});
+    if (user) return res.status(400).send("Ya existe un usuario registrado con ese nombre o e-mail.");
+
+
+    user = new Users(req.body); 
+
+    const salt = await bcrypt.genSalt(10);
+    console.log(salt)
+    const hash = await bcrypt.hash(user._password, salt);
+
+    user._password = hash;
     const newUser = await user.save()
-    res.send(newUser)
+
+    res.send({username: user.username, email: user.email})
     winston.info('Nuevo/a usuario/a en la la base de datos.')
 })
 

@@ -1,5 +1,7 @@
 //SCHEMA - USERS
 
+const config = require("config");
+const jwt = require("jsonwebtoken");
 const mongoose = require('mongoose');
 const Joi = require('joi')
 const validator = require("../middleware/joiValidator");
@@ -13,7 +15,7 @@ const commentsSchema = new mongoose.Schema({
     date: Date,
     likes: Number,
     n: Number
-})
+});
 
 const usersSchema = new mongoose.Schema({
     username: {
@@ -29,13 +31,21 @@ const usersSchema = new mongoose.Schema({
     _password: {
         type: String,
         required: true,
-        unique:true,
     },
     url_user_img: String,
     reg_Date: Date,
     comments: [commentsSchema]
 
 });
+
+usersSchema.methods.generateToken = function () {
+    return jwt.sign(
+      _.pick(this, ["_id", "name"]),
+      config.get("jwtPrivateKey")
+    );
+  };
+
+const Users = mongoose.model('Users', usersSchema)
 
 function validateComments(comments){
     const schema = Joi.object({
@@ -51,30 +61,22 @@ function validateComments(comments){
     return schema.validate(comments)
 }
 
-function validateUsers(users){
-    const schema = Joi.object({
-        username: Joi.string()
-        .required()
-        .messages({ "any.required": `El nombre de usuario no es valido o está incompleto.` }),
-        email: Joi.string()
-        .email()
-        .required()
-        .messages({ "any.required": `El e-mail no es valido o está incompleto.` }),
-        _password: Joi.string()
-        .required()
-        .messages({ "any.required": `La contraseña no es valida o está incompleta` }),
-        url_user_img: Joi.string(),
-        reg_Date: Joi.date(),
-        comments: [validateComments]
-    })
 
-    return schema.validate(users)
-}
+const reqSchema = Joi.object({
+    username: Joi.string()
+    .required()
+    .messages({ "any.required": `El nombre de usuario no es valido o está incompleto.` }),
+    email: Joi.string()
+    .email()
+    .required()
+    .messages({ "any.required": `El e-mail no es valido o está incompleto.` }),
+    _password: Joi.string()
+    .required()
+    .messages({ "any.required": `La contraseña no es valida o está incompleta` }),
+    url_user_img: Joi.string(),
+    reg_Date: Joi.date(),
+    comments: [validateComments]
+})
 
-//MODELS Y EXPORTAR MODULO
-
-const Users = mongoose.model('Users', usersSchema)
-
-module.exports = Users
-
-module.exports.validate = validateUsers;
+exports.Users = Users;
+exports.validateBody = validator(reqSchema);
