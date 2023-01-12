@@ -12,6 +12,11 @@ router.get('/all', async (req, res) => {
     
 })
 
+//SELECCIONAR POR TITULO 
+router.get('/:title', async (req, res) => {
+    res.send (await Films.findOne({title: { $regex: req.params.title, $options:'i' } }))
+})
+
 //CREAR NUEVA ENTRADA FILM
 router.post('/create', async (req, res) => {
     const film = new Films(req.body) 
