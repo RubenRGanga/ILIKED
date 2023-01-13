@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 
 import "./styles/navbar_styles.css"
-// import logo from "./logo.svg"
+import logo from "../assets/LOGO2.png"
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)
@@ -11,9 +11,7 @@ function Navbar() {
     return(
         <>
         <nav>
-            {/* <a href='https://api.nasa.gov/' target="_blank" rel="noopener noreferrer">
-            <img src={logo} className="App-logo" alt="ILIKED! logo" />
-            </a> */}
+            <NavLink to="/home"><img src={logo} className="App-logo" alt="ILIKED!"/></NavLink>
             <div id='cajaTexto'>
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
                     <li><NavLink to="/login">LOGIN</NavLink></li>

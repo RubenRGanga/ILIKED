@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root{
+    --colorFondo: rgb(48,48,48);
+    --miPurpura: rgba(125,18,130,1);
+    --colorHover: rgba(45,25,50,1);
+    --colorlogo: rgb(183, 34, 94);
+  }
+
 .App-logo{
-    height: fit-content;
-    margin-top: 50px;
+    height: 60px;
+    width: auto;
+    /* margin-top: 50px; */
 }
 
 nav {
@@ -8,7 +18,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 65px;
-    background: #061f4a;
+    background: var(--miPurpura);
     /* padding: 20px 40px; */
     padding-top: 20px;
     padding-right: 40px;
@@ -31,31 +41,31 @@ nav {
 
 #navbar li a{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 900;
     color: #f1f1f1;
-    font-family: nasaFont;
+    font-family: 'Shadows Into Light', cursive;
     transition: 300ms ease-in-out;
 
 }
 
 #navbar li a:hover,
 #navbar li a.active{
-    color: #dd361c;
+    color: var(--colorHover);
 
 }
 
-#navbar li a:hover::after,
+/* #navbar li a:hover::after,
 #navbar li a.active::after{
     content: "";
-    width: 33%;
+    width: 75%;
     height: 2px;
     background: #dd361c;
     position: absolute;
     bottom: -2px;
     left: 20px;
 
-}
+} */
 
 #mobile{
     display: none;
@@ -77,7 +87,7 @@ nav {
         right: -150px;
         width: 150px;
         height: 100vh;
-        background: #0b3d91;
+        background: var(--colorlogo);
         box-shadow: 0 40px 60px rgba(0, 0, 0,  0.1);
         padding: 40px 0 0 10px;
         transition: 400ms ease-in-out;

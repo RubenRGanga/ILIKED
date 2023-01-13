@@ -1,9 +1,18 @@
+:root{
+  --colorFondo: rgb(48,48,48);
+  --miPurpura: rgba(125,18,130,1);
+}
+
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-html{
-  background-color: #aeb0b5;
+html {
+  width: 100%;
+  height: 100%;
+  background: var(--colorFondo);
+  background: linear-gradient(45deg, var(--colorFondo) 13%, var(--miPurpura) 96%);
+  position:  relative;
 }
