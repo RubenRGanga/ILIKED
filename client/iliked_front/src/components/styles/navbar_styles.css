@@ -8,8 +8,9 @@
   }
 
 .App-logo{
-    height: 60px;
+    height: 25px;
     width: auto;
+    
     /* margin-top: 50px; */
 }
 
@@ -17,7 +18,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
+    height: 25px;
     background: var(--miPurpura);
     /* padding: 20px 40px; */
     padding-top: 20px;
@@ -41,8 +42,8 @@ nav {
 
 #navbar li a{
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 1.2rem;
+    /* font-weight: 900; */
     color: #f1f1f1;
     font-family: 'Shadows Into Light', cursive;
     transition: 300ms ease-in-out;
@@ -54,18 +55,6 @@ nav {
     color: var(--colorHover);
 
 }
-
-/* #navbar li a:hover::after,
-#navbar li a.active::after{
-    content: "";
-    width: 75%;
-    height: 2px;
-    background: #dd361c;
-    position: absolute;
-    bottom: -2px;
-    left: 20px;
-
-} */
 
 #mobile{
     display: none;

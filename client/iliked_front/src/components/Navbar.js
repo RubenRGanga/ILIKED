@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 
 import "./styles/navbar_styles.css"
-import logo from "../assets/.png"
+import logo from "../assets/LOGOshadow.png"
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)

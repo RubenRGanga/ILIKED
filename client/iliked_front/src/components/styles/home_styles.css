@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.cuadroRandon10{
+    display: flex;
+    flex-flow: wrap;
+    margin-left: 1.8rem;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #212121;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3{
+    
+    background-color: #212121;
+    font-family: nasaFont;
+    color: #f1f1f1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+    margin: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+   }
+
+.img{
+    width: 200px;
+    height: 300px;
+}
