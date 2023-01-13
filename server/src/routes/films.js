@@ -7,18 +7,22 @@ const router = express.Router()
 
 //VER TODO
 router.get('/all', async (req, res) => {
-    
-    res.send (await Films.find({}))
-    
+     res.send (await Films.find({}))
 })
 
 //SELECCIONAR POR TITULO 
-router.get('/:title', async (req, res) => {
+router.get('/search/:title', async (req, res) => {
     res.send (await Films.findOne({title: { $regex: req.params.title, $options:'i' } }))
 })
 
+//OBTENER UN NUMERO DE PELICULAS ALEATORIAS.
+router.get('/random/:n', async (req, res) => {
+    res.send (await Films.aggregate([{ $sample: { size: Number(req.params.n) } }]))
+});
+
 //CREAR NUEVA ENTRADA FILM
 router.post('/create', async (req, res) => {
+    
     const film = new Films(req.body) 
     const newFilm = await film.save()
     res.send(newFilm)
