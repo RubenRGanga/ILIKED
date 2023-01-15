@@ -5,6 +5,7 @@
     --miPurpura: rgba(125,18,130,1);
     --colorHover: rgba(45,25,50,1);
     --colorlogo: rgb(183, 34, 94);
+    --miblanco: #f1f1f1;
   }
 
 .App-logo{
@@ -44,7 +45,7 @@ nav {
     text-decoration: none;
     font-size: 1.2rem;
     /* font-weight: 900; */
-    color: #f1f1f1;
+    color: var(--miblanco);
     font-family: 'Shadows Into Light', cursive;
     transition: 300ms ease-in-out;
 

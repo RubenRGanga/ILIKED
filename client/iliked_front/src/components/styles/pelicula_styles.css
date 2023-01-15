@@ -10,7 +10,7 @@
     --miNegro: #212121;
 }
 
-.marcoRandon10{
+.cuadroRandon10{
     display: flex;
     flex-flow: wrap;
     margin-left: 2rem;
@@ -49,4 +49,8 @@ h2 {
 
 .year{
     font-size: 0.8rem;
+}
+
+.select{
+    display: none;
 }

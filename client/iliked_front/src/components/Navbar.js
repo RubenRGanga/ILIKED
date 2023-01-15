@@ -11,7 +11,7 @@ function Navbar() {
     return(
         <>
         <nav>
-            <NavLink to="/home"><img src={logo} className="App-logo" alt="ILIKED!"/></NavLink>
+            <NavLink to="/home"><img src={logo} className="App-logo" alt="I LIKED!"/></NavLink>
             <div id='cajaTexto'>
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
                     <li><NavLink to="/login">LOGIN</NavLink></li>
