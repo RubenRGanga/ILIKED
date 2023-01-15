@@ -4,6 +4,7 @@ const Films = require('../models/film_model')
 const express = require('express')
 const winston = require('winston')
 const router = express.Router()
+const auth = require ("../middleware/auth")
 
 //VER TODO
 router.get('/all', async (req, res) => {
@@ -21,7 +22,7 @@ router.get('/random/:n', async (req, res) => {
 });
 
 //CREAR NUEVA ENTRADA FILM
-router.post('/create', async (req, res) => {
+router.post('/create', auth, async (req, res) => {
     
     const film = new Films(req.body) 
     const newFilm = await film.save()

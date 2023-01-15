@@ -27,7 +27,7 @@ const Home = () => {
         {films.map((item,index) => (
           <div key={item._id}>
             <div className="card">
-            <NavLink to="/film"><img className='img' src={item.url_img} alt={item.title}></img></NavLink>
+            <Link to={`/film/${item.title}`}><img className='img' src={item.url_img} alt={item.title}></img></Link>  
               <p className="title">{item.title}</p>
               <p className='year'>({item.year})</p>
             </div>
@@ -39,5 +39,5 @@ const Home = () => {
     );
 };
 
-
+// /film/${item.title}
 export default Home;

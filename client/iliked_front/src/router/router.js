@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import PublicLayout from "../components/PublicLayout";
 import Home from "../components/Home";
-import Login from "../components/Login"
+// import Login from "../components/Login"
 import Film from "../components/Film";
 
 
@@ -22,10 +22,10 @@ const router = createBrowserRouter([
         path: "/film",
         element: <Film/>,
       },      
-      {
-        path: "/login",
-        element: <Login/>,
-      },
+      // {
+      //   path: "/login",
+      //   element: <Login/>,
+      // },
     ],
   },
 ]);
