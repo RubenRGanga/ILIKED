@@ -13,7 +13,7 @@ import axios from "axios";
 import "./styles/film_styles.css"
 import imdb from "../assets/imdb_logo.png"
 import yt from "../assets/yt.png"
-import like from "../assets/heart.ico"
+
 
 // const endpointPelicula = 'http://localhost:3000/films/search/';
 
@@ -68,7 +68,7 @@ const Film = () => {
                                         <p className='tituloComentario'>{item.comentary_t}</p>
                                         <p className='autor'>Autor:  {item.username}</p>
                                         <p className='comentario'>{item.comentary}</p>
-                                        <i id='bar' className="fa-solid fa-heart-circle-plus"></i> {item.likes}
+                                        <i id='like' className="fa-solid fa-heart-circle-plus"></i> {item.likes}
                                     </div>
                                     
                                 ))}

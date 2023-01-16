@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import "./styles/navbar_styles.css"
 import logo from "../assets/LOGOshadow.png"
+import Search from "./Search";
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)
@@ -14,6 +15,7 @@ function Navbar() {
             <NavLink to="/"><img src={logo} className="App-logo" alt="I LIKED!"/></NavLink>
             <div id='cajaTexto'>
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
+                    <Search></Search>
                     <li><NavLink to="/login">LOGIN</NavLink></li>
                     <li><NavLink to="/usuario">USUARIO</NavLink></li>
                 </ul>

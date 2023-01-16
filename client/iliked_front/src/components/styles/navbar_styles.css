@@ -68,6 +68,11 @@ nav {
     align-items: center;
 }
 
+.search{
+    display: inline-block;
+    
+}
+
 @media screen and (max-width: 769px){
     #navbar {
         display: flex;

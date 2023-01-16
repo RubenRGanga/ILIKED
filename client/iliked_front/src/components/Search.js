@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { Tooltip } from '@mui/material';
 import axios from "axios";
 
-import "./styles/pelicula_styles.css"
-
-
+import "./styles/seach_styles.css"
 
 const endPointPelicula = "http://localhost:3000/films/search/";
 
@@ -41,23 +39,13 @@ const Search = () => {
         <>
             <div>
                 <form className='search'>
-                    <input type= "text" value={input} placeholder="Título" onChange={(event) => setInput(event.target.value)}/>
+                    <input className="input" type= "text" value={input} placeholder="Título" onChange={(event) => setInput(event.target.value)}/>
+                    <i id='lupa' onClick={(e) => getFilter(e)} className="fa-solid fa-magnifying-glass"></i>
                         <select className="select" id="value" name="value" onSubmit={(event) => console.log(event.target.value)}>
                             <option value="title">Título</option>
                         </select>
-                    <button id="search" onClick={(e) => getFilter(e)}>Search!</button>
+                        
                 </form>
-            </div>
-            <div className="cuadroFilm">
-                    {film.map((item,index) => (
-                    <div key={item._id}>
-                        <div className="card">
-                        <img className='img' src={item.url_img} alt={item.title}></img>
-                        <p className="title">{item.title}</p>
-                        <p className='year'>({item.year})</p>
-                        </div>
-                    </div>      
-                    ))}
             </div>
         </>
         

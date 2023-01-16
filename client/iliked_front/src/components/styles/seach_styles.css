@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root{
+    --colorFondo: rgb(48,48,48);
+    --miPurpura: rgba(125,18,130,1);
+    --colorHover: rgba(45,25,50,1);
+    --colorlogo: rgb(183, 34, 94);
+    --miBlanco: #f1f1f1;
+    --miNegro: #212121;
+}
+
+.search{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.select{
+    display: none;
+}
+
+.input {
+    color: var(--miBlanco);
+    border: 2px solid var(--miBlanco);
+    border-radius: 10px;
+    padding: 6px 25px;
+    background: transparent;
+    max-width: 190px;
+}
+   
+#lupa{
+    position: relative;
+    color: var(--miBlanco);
+    top: 4px;
+    left: -30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+   
