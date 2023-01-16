@@ -10,6 +10,6 @@ module.exports = (req, res, next) => {
     req.user = payload;
     next();
   } catch (err) {
-    res.status(400).send("Token invalido");
+    res.status(400).send("Token no valido");
   }
 };

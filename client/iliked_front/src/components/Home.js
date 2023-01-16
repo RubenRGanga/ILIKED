@@ -39,5 +39,4 @@ const Home = () => {
     );
 };
 
-// /film/${item.title}
 export default Home;

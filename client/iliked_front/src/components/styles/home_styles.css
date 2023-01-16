@@ -13,13 +13,13 @@
 .marcoRandon10{
     display: flex;
     flex-flow: wrap;
-    margin-left: 2rem;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 h2 {
-    text-align: left;
+    margin-left: 77px;
     margin-top: 2rem;
-    margin-left: 3rem;
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--miBlanco);

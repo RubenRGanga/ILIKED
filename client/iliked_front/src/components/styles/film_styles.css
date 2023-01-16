@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root{
+    --colorFondo: rgb(48,48,48);
+    --miPurpura: rgba(125,18,130,1);
+    --colorHover: rgba(45,25,50,1);
+    --colorlogo: rgb(183, 34, 94);
+    --miBlanco: #f1f1f1;
+    --miNegro: #212121;
+}
+
+.marcoFilm{
+    display: flex;
+    flex-flow: wrap;
+    margin-left: 73px;
+    margin-right: 73px;
+    margin-top: 20px;
+    /* background-color: rgb(215, 76, 30); */
+}
+
+.marcoInfo{
+    /* background-color: aqua; */
+    width: 784px;
+    text-align: center;
+
+    
+}
+
+.titulo{
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--miBlanco);
+    font-family: 'Poppins', sans-serif;
+}
+
+.imgfilm{
+    width: 350px;
+    height: 500px;
+}
+
+.line1, .line2{
+    color: var(--miBlanco);
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.imdb{
+    border-radius: 5%;
+    margin: 15px;
+    height: auto;
+    width: 50px;
+    cursor: pointer;
+
+
+}
+
+.yt{
+    margin: 5px;
+    height: auto;
+    width: 50px;
+    cursor: pointer
+
+}
+
+.popup-content {
+    place-items: center;
+    background: var(--colorHover);
+    width: auto;
+    padding: 5px;
+    margin-top: 150px;
+    margin-left: 150px;
+  }
+  .popup-arrow {
+    display: none;
+    color: var(--colorHover);
+  }
+  [role='tooltip'].popup-content {
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
+  
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  [data-popup='tooltip'].popup-overlay {
+    background: var(--miBlanco);
+    opacity: 10%;
+  }
+
