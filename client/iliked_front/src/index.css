@@ -10,7 +10,7 @@
 }
 
 body {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background: var(--colorFondo);
   background: linear-gradient(45deg, var(--colorFondo) 13%, var(--miPurpura) 96%) no-repeat;

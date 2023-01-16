@@ -21,7 +21,7 @@
 
 .marcoInfo{
     /* background-color: aqua; */
-    width: 784px;
+    width: 767px;
     text-align: center;
 
     
@@ -29,7 +29,6 @@
 
 .titulo{
     margin: 0px;
-    text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--miBlanco);
@@ -65,6 +64,27 @@
 
 }
 
+.marcoComentario{
+  margin: 0 2rem 0 2rem;
+  text-align: justify;
+  text-justify: distribute;
+  color: var(--miBlanco);
+  font-family: 'Poppins', sans-serif;
+}
+
+.tituloComentario{
+  font-weight: 800;
+}
+
+.autorLikes{
+  font-size: 0.8rem;
+}
+
+#bar{
+  font-size: 1.2rem;
+  gap: 5px;
+}
+
 .popup-content {
     place-items: center;
     background: var(--colorHover);
@@ -87,6 +107,6 @@
   }
   [data-popup='tooltip'].popup-overlay {
     background: var(--miBlanco);
-    opacity: 10%;
+    opacity: 30%;
   }
 
