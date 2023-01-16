@@ -10,7 +10,7 @@ import "./styles/pelicula_styles.css"
 const endPointPelicula = "http://localhost:3000/films/search/";
 
 
-const Pelicula = () => {
+const Search = () => {
 
     const [film, setFilm] = useState([])
     const [query, setQuery] = useState("")
@@ -65,4 +65,4 @@ const Pelicula = () => {
 
 }
 
-export default Pelicula;
+export default Search;

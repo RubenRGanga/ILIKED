@@ -64,8 +64,15 @@
 
 }
 
-.marcoComentario{
-  margin: 0 2rem 0 2rem;
+.marcoComentarios{
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.marco1Comentario{
+  margin: 1rem 2rem 0 2rem;
+  /* height: 200px;
+  overflow-y: scroll; */
   text-align: justify;
   text-justify: distribute;
   color: var(--miBlanco);
@@ -74,15 +81,22 @@
 
 .tituloComentario{
   font-weight: 800;
+  font-size: 0.95rem;
 }
 
-.autorLikes{
+.autor{
+  font-size: 0.7rem;
+
+}
+
+.comentario{
   font-size: 0.8rem;
 }
 
 #bar{
   font-size: 1.2rem;
   gap: 5px;
+  cursor: pointer;
 }
 
 .popup-content {

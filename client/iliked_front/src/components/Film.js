@@ -62,17 +62,22 @@ const Film = () => {
                                     />
                                 </div>
                             </Popup>
-                            <div className='marcoComentario'>
-                                <p className='tituloComentario'>{film.comments[0].comentary_t}</p>
-                                <p className='autorLikes'>Autor:  {film.comments[0].username} <i id='bar' className="fa-solid fa-heart-circle-plus"> {film.comments[0].likes}</i></p>
-                                <p className='Comentario'>{film.comments[0].comentary}</p>
-                                
+                            <div className="marcoComentarios">
+                                {film.comments.map((item, index) => (
+                                    <div className='marco1Comentario' key={item._id}>
+                                        <p className='tituloComentario'>{item.comentary_t}</p>
+                                        <p className='autor'>Autor:  {item.username}</p>
+                                        <p className='comentario'>{item.comentary}</p>
+                                        <i id='bar' className="fa-solid fa-heart-circle-plus"></i> {item.likes}
+                                    </div>
+                                    
+                                ))}
                             </div>
                         </div>
                 </div>
                 
             </>
-        )};</>
+        )}</>
     );
 
 };
