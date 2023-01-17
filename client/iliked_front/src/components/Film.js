@@ -23,7 +23,7 @@ const Film = () => {
 
     useEffect(() => {
         const getFilm = async () => {
-            console.log(routeParams)
+            // console.log(routeParams)
 
             const resp = await fetch(`http://localhost:3000/films/search/${routeParams.title}`);
             const data = await resp.json();

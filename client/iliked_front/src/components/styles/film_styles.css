@@ -31,6 +31,7 @@
     margin: 0px;
     font-size: 1.8rem;
     font-weight: 900;
+    text-shadow: 2px 2px 6px rgb(21, 21, 21);
     color: var(--miBlanco);
     font-family: 'Poppins', sans-serif;
 }
@@ -69,10 +70,22 @@
   overflow-y: scroll;
 }
 
+.marcoComentarios::-webkit-scrollbar {
+  width: 16px;
+}
+
+.marcoComentarios::-webkit-scrollbar-track {
+  background-color: var(--colorHover);
+  border-radius: 100px;
+}
+
+.marcoComentarios::-webkit-scrollbar-thumb {
+  background-color: var(--miPurpura);
+  border-radius: 100px;
+}
+
 .marco1Comentario{
   margin: 1rem 2rem 0 2rem;
-  /* height: 200px;
-  overflow-y: scroll; */
   text-align: justify;
   text-justify: distribute;
   color: var(--miBlanco);
@@ -80,8 +93,9 @@
 }
 
 .tituloComentario{
+  text-shadow: 2px 2px 6px rgb(21, 21, 21);
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .autor{
@@ -124,4 +138,6 @@
     background: var(--miBlanco);
     opacity: 30%;
   }
+
+  
 
