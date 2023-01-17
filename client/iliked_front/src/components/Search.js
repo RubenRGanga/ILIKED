@@ -1,23 +1,43 @@
 import React, {useState, setState, useEffect} from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Film from "./Film";
 
 
 import "./styles/seach_styles.css"
 
 const Search = () => {
-    const [filmTitle, setFilmTitle] = useState('');
+    const [film, setFilm] = useState('');
     const [filmData, setFilmData] = useState(null);
+    const navigate = useNavigate();
 
     const handleSearch = (e) => {
-        setFilmTitle(e.target.value);
+        setFilm(e.target.value);
     }
 
     const searchFilm = () => {
-        fetch(`http://localhost:3000/films/search/${filmTitle}`)
-            .then(res => res.json())
-            .then(data => {
-                setFilmData(data);
+      
+        fetch(`http://localhost:3000/films/search/${film}`)
+            .then(res => {
+                
+               
+                return res.json()
             })
+            
+            .then(data => {
+                console.log()
+                
+              
+                setFilmData(data);
+                return data
+
+            })
+            
+            .then((data)=>{
+                console.log(data)
+
+                 navigate(`/film/${film}`) 
+            })
+            .catch(err => navigate(`/`) )
     }
 
     return (
@@ -25,9 +45,9 @@ const Search = () => {
             <div>
                 <form className='search'>
                     <input className="input" type= "text" onChange={handleSearch} />
-                    <i id='lupa' onClick={searchFilm} className="fa-solid fa-magnifying-glass"></i>          
+                    <i id='lupa' onClick={searchFilm} className="fa-solid fa-magnifying-glass"></i>       
                 </form>
-                {filmData && <Film data={filmData} />}
+                {/* {filmData && <Film data={filmData} />} */}
             </div>
         </>
         

@@ -8,8 +8,9 @@ const commentsSchema = new mongoose.Schema({
     username: String,
     comentary_t: String,
     comentary: String,
-    date: Date,
-    likes: Number
+    date: String,
+    likes: Number,
+    n: Number
 })
 
 const filmsSchema = new mongoose.Schema({
@@ -31,7 +32,7 @@ function validateComments(comments){
     username: Joi.string(),
     comentary_t: Joi.string(),
     comentary: Joi.string(),
-    date: Joi.date(),
+    date: Joi.string(),
     likes: Joi.number()
     })
 

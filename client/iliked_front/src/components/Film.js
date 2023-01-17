@@ -7,15 +7,13 @@ import Popup from 'reactjs-popup';
 
 
 import 'reactjs-popup/dist/index.css';
-import axios from "axios";
 
 
 import "./styles/film_styles.css"
 import imdb from "../assets/imdb_logo.png"
 import yt from "../assets/yt.png"
 
-
-// const endpointPelicula = 'http://localhost:3000/films/search/';
+import Comentarios from './Comentarios_form';
 
 const Film = () => {
     const [film, setFilm] = useState(null);
@@ -32,7 +30,7 @@ const Film = () => {
         }
         getFilm()
         
-    }, [])
+    })
 
 
     return (
@@ -60,6 +58,11 @@ const Film = () => {
                                     height='360px'
                                     controls
                                     />
+                                </div>
+                            </Popup>
+                            <Popup trigger={<i class="fa-solid fa-comment-medical"></i>} position="left center">
+                                <div className='añadirComentario'>
+                                    <Comentarios titulo={film.title}></Comentarios>
                                 </div>
                             </Popup>
                             <div className="marcoComentarios">

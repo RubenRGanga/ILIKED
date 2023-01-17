@@ -31,8 +31,12 @@ router.post('/create', auth, async (req, res) => {
 })
 
 //CREAR UN NUEVO COMENTARIO EN FILMS
-router.put('/edit/:_id', async (req, res) => {
-    const film = await Films.findOneAndUpdate({id: req.params._id}, req.body)
+router.put('/edit/:title', async (req, res) => {
+    // console.log(req.body)
+
+    const film = await Films.findOneAndUpdate({title: req.params.title}, {$push: {comments: req.body}})
+  
+
     res.send(film)
     winston.info(`Editado: ${req.params.title}`)
 })
