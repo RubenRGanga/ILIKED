@@ -6,18 +6,30 @@ const Joi = require('joi')
 const commentsSchema = new mongoose.Schema({
     user_id: String, 
     username: String,
-    comentary_t: String,
-    comentary: String,
+    comentary_t: {
+        type: String,
+        required: true,
+    },
+    comentary: {
+        type: String,
+        required: true,
+    },
     date: Date,
     likes: Number,
     n: Number
 })
 
 const filmsSchema = new mongoose.Schema({
-    title: String,
+    title: {
+        type: String,
+        required: true,
+    },
     o_title: String,
     year: Number,
-    director: String,
+    director: {
+        type: String,
+        required: true,
+    },
     cast: [String],
     url_img: String,
     url_imdb: String,
@@ -45,7 +57,7 @@ function validateFilms(films){
     o_title: Joi.string(),
     year: Joi.number(),
     director: Joi.string(),
-    cast: [Joi.string(), Joi.string(), Joi.string()],
+    cast: [Joi.string()],
     url_img: Joi.string(),
     url_imdb: Joi.string(),
     url_video: Joi.string(),

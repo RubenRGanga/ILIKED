@@ -22,7 +22,7 @@ router.get('/random/:n', async (req, res) => {
 });
 
 //CREAR NUEVA ENTRADA FILM
-router.post('/create', auth, async (req, res) => {
+router.post('/create', async (req, res) => {
     
     const film = new Films(req.body) 
     const newFilm = await film.save()

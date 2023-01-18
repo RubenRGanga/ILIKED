@@ -26,7 +26,7 @@ const Search = () => {
             .then((data)=>{
                  navigate(`/film/${film}`) 
             })
-            .catch(err => navigate(`/`) )
+            .catch(err => navigate(`/newfilm`) )
     }
 
     return (
