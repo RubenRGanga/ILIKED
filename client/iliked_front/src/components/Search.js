@@ -1,6 +1,5 @@
 import React, {useState, setState, useEffect} from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Film from "./Film";
 
 
 import "./styles/seach_styles.css"
@@ -18,23 +17,13 @@ const Search = () => {
       
         fetch(`http://localhost:3000/films/search/${film}`)
             .then(res => {
-                
-               
                 return res.json()
             })
-            
             .then(data => {
-                console.log()
-                
-              
                 setFilmData(data);
                 return data
-
             })
-            
             .then((data)=>{
-                console.log(data)
-
                  navigate(`/film/${film}`) 
             })
             .catch(err => navigate(`/`) )
@@ -47,7 +36,6 @@ const Search = () => {
                     <input className="input" type= "text" onChange={handleSearch} />
                     <i id='lupa' onClick={searchFilm} className="fa-solid fa-magnifying-glass"></i>       
                 </form>
-                {/* {filmData && <Film data={filmData} />} */}
             </div>
         </>
         

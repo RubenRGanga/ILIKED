@@ -60,7 +60,7 @@ const Film = () => {
                                     />
                                 </div>
                             </Popup>
-                            <Popup trigger={<i class="fa-solid fa-comment-medical"></i>} position="left center">
+                            <Popup trigger={<i className="fa-solid fa-comment-medical"></i>} position="left center">
                                 <div className='añadirComentario'>
                                     <Comentarios titulo={film.title}></Comentarios>
                                 </div>

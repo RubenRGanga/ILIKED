@@ -7,10 +7,8 @@ import "./styles/comentarios_styles.css"
 
 
 const Comentarios = (props) => {
-
- 
-
-    let apiEndpoint = `http://localhost:3000/films/edit/${props.titulo}`;
+  
+  let apiEndpoint = `http://localhost:3000/films/edit/${props.titulo}`;
     
 
   const [user_id, setUser_id] = useState("");
@@ -28,16 +26,28 @@ const Comentarios = (props) => {
     e.preventDefault();
 
     if (!comentary_t || !comentary) return alert("Faltan datos por añadir.");
+
+    //INTENTO DE FUNCIÓN QUE INCREMENTE EL VALOR DE "n".
+    // async function getLastN() {
+    //   try {
+    //     const { data } = await axios.get(`http://localhost:3000/films/search/${props.titulo}`);
+    //     return data.[comments.length - 1].n;
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
       
+    // let lastN = await getLastN();
+    // lastN += 1;
 
     const newComentary = {
       user_id:"63b46ca5d438118df7e60aa1",
       username:"Colector",
-      date: '',
+      date: new Date().toISOString(),
       comentary_t,
       comentary,
       likes: 0,
-      n:1
+      n: 2
     };
 
     try {
@@ -47,8 +57,8 @@ const Comentarios = (props) => {
       console.log(err);
     }
 
-    alert("Comentario añadido.");
-    // navigate(`/film/${props.titulo}`);
+    window.location.reload(true)
+    
 
   };
 
