@@ -1,18 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate ,useParams} from 'react-router-dom';
+import AuthConsumer from "../hooks/useAuth";
 
 import "./styles/comentarios_styles.css"
+
 
 
 
 const Comentarios = (props) => {
   
   let apiEndpoint = `http://localhost:3000/films/edit/${props.titulo}`;
-    
-
-  const [user_id, setUser_id] = useState("");
-  const [username, setUsername] = useState("");
+  const [user, dispatch] = AuthConsumer();
+  console.log(user)
   const [date, setDate] = useState("");
   const [comentary_t, setComentary_t] = useState("");
   const [comentary, setComentary] = useState("");
@@ -24,7 +24,7 @@ const Comentarios = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+ 
     if (!comentary_t || !comentary) return alert("Faltan datos por añadir.");
 
     //INTENTO DE FUNCIÓN QUE INCREMENTE EL VALOR DE "n".
@@ -41,8 +41,6 @@ const Comentarios = (props) => {
     // lastN += 1;
 
     const newComentary = {
-      user_id:"63b46ca5d438118df7e60aa1",
-      username:"Colector",
       date: new Date().toISOString(),
       comentary_t,
       comentary,
@@ -53,11 +51,12 @@ const Comentarios = (props) => {
     try {
       const { data } = await axios.put(apiEndpoint, newComentary);
       console.log(data);
+      navigate(0)
     } catch (err) {
       console.log(err);
     }
 
-    window.location.reload(true) //Actualiza a la vista de Pag comentada.
+     //Actualiza a la vista de Pag comentada.
     // navigate(-1) //Actualiza a la pagina anterior.
     
 

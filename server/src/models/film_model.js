@@ -36,7 +36,7 @@ const filmsSchema = new mongoose.Schema({
     url_video: String,
     comments: [commentsSchema]
 
-});
+}, { timestamps: true });
 
 function validateComments(comments){
     const schema = Joi.object({

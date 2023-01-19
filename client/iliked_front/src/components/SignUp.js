@@ -11,9 +11,9 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const schema = {
-    name: Joi.string().required(),
+    username: Joi.string().required(),
     email: Joi.string().email().required(),
-    password: Joi.string().required(),
+    _password: Joi.string().required(),
   };
 
   const handleSubmit = async (account) => {
@@ -31,8 +31,8 @@ const SignUp = () => {
   return (
     <Form
       inputs={[
-        { name: "name", label: "Nombre" },
-        { name: "email", label: "email" },
+        { name: "username", label: "Nombre de Usuario" },
+        { name: "email", label: "e-mail" },
         { name: "_password", label: "Contraseña", type: "password" },
       ]}
       onSubmit={handleSubmit}

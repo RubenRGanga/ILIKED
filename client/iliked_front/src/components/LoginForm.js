@@ -1,61 +1,44 @@
-import { useState, useTransition } from "react";
-var Joi = require('joi-browser');
+import Form from "../components/Form";
+import Joi from "joi-browser";
+import { toast } from "react-toastify";
+import AuthConsumer from "../hooks/useAuth";
+import user from "../services/userService";
 
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-    const [account, setAccount] = useState({username: "", _password: ""});
-    const [error, setError] = useState({});
+  const [, dispatch] = AuthConsumer();
+  const navigate = useNavigate();
 
-    const schema = {
-        username: Joi.string().required(),
-        _password: Joi.string().required()
+  const schema = {
+    username: Joi.string().required(),
+    _password: Joi.string().required(),
+  };
+
+  const handleSubmit = async (account) => {
+
+    try {
+      const data = await user.login(account);
+      toast.info("Usario autentificado")
+      dispatch({ type: "login" });
+      navigate(-1);
+    } catch (err) {
+      if (err.response.status === 400) toast.error(err.response.data);
     }
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  return (
+    <Form
+      inputs={[
+        { name: "username", label: "Nombre de Usuario:", type: "text"},
+        { name: "_password", label: "Contraseña", type: "password" },
+      ]}
+      onSubmit={handleSubmit}
+      header="Acceso de Usuarios"
+      submitLabel="Login"
+      validSchema={schema}
+    />
+  );
+};
 
-        const result = Joi.validate(account, schema, {abortEarly: false});
-        
-        console.log(result)
-        console.log('Enviado')
-    };
-
-    const handleChange = ({target: input}) => {
-        setAccount((prevValue) => ({...prevValue, [input.name]: input.value}));
-    };
-
-    return(
-        <form onSubmit={handleSubmit}>
-            <div className="formLogin">
-
-                <div className="input-group">
-                <label htmlFor="exampleFormControlInput1"className="label">Nombre de Usuario: </label>
-                <input autoComplete="off" 
-                name="username" 
-                id="username" 
-                className="input" 
-                type="text" 
-                value={account.username}
-                onChange={handleChange}/>
-                </div>
-
-                <div className="input-group">
-                <label htmlFor="exampleFormControlInput2"className="label">Contraseña: </label>
-                <input autoComplete="off" 
-                name="_password" 
-                id="_password" 
-                className="input" 
-                type="password" 
-                value={account._password}
-                onChange={handleChange}/>
-                </div>
-
-                <button type="submit">Identificarse</button>
-            </div>
-        </form>
-    );
-
-
-}
-
-export default LoginForm
+export default LoginForm;

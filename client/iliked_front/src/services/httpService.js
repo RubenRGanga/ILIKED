@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import logger from "./loggerService";
+
 import config from "../config.json";
 
 axios.interceptors.response.use(false, function (error) {
@@ -11,14 +11,22 @@ axios.interceptors.response.use(false, function (error) {
       config.toastErrorOptions
     );
 
-    logger.capture(error);
+   
   }
   return Promise.reject(error);
 });
+
+
+function setToken(token) {
+  if(token) {
+    axios.defaults.headers.common["x-auth-token"] = token;
+  }
+}
 
 export default {
   get: axios.get,
   post: axios.post,
   put: axios.put,
   delete: axios.delete,
+  setToken,
 };

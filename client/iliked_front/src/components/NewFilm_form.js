@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate ,useParams} from 'react-router-dom';
+import { Link, useNavigate ,useParams} from 'react-router-dom';
+import AuthConsumer from "../hooks/useAuth";  
 
 import "./styles/nuevoFilm_styles.css"
 
@@ -24,7 +25,11 @@ const NewFilm = () => {
     const [comentary, setComentary] = useState("");
     const [likes, setLikes] = useState("");
     const [n, setN] = useState("");
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const [auth] = AuthConsumer();
+
+
 
 //   const routeParams = useParams()
 
@@ -66,6 +71,8 @@ const NewFilm = () => {
     
 
   };
+
+  if(!auth.isAuth) return <p>Necesitas estar logueado <Link to="/login">login</Link></p>
 
   return (
     <>

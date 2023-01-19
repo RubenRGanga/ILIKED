@@ -15,6 +15,6 @@ const capture = (error) => {
 };
 
 export default {
-  init,
+  // init,
   capture,
 };

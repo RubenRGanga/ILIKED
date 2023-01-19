@@ -3,7 +3,7 @@
 const express = require('express')
 const winston = require('winston')
 const bcrypt = require("bcrypt");
-const {Users} = require('../models/user_model')
+const {Users, validateBody} = require('../models/user_model')
 const router = express.Router()
 
 
@@ -14,7 +14,7 @@ router.get('/all', async (req, res) => {
 })
 
 //CREAR NUEVO USUARIO
-router.post('/create', async (req, res) => {
+router.post('/create', validateBody, async (req, res) => {
     let user = await Users.findOne({$or: [{username: req.body.username}, {email: req.body.email}]});
     if (user) return res.status(400).send("Ya existe un usuario registrado con ese nombre o e-mail.");
 
@@ -26,11 +26,18 @@ router.post('/create', async (req, res) => {
     const hash = await bcrypt.hash(user._password, salt);
 
     user._password = hash;
-    const newUser = await user.save()
+    await user.save()
 
-    res.send({username: user.username, email: user.email})
-    winston.info('Nuevo/a usuario/a en la la base de datos.')
-})
+    // res.send({username: user.username, email: user.email})
+    // winston.info('Nuevo/a usuario/a en la la base de datos.')
+
+    const token = user.generateToken();
+    res
+      .header("x-auth-token", token)
+      .header("access-control-expose-headers", "x-auth-token")
+      .send('Nuevo/a usuario/a en la la base de datos.');
+
+});
 
 //EDITAR USUARIO
 router.put('/edit/:username', async (req, res) => {

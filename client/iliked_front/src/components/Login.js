@@ -1,5 +1,5 @@
 import LoginForm from "./LoginForm";
-// import SygnUp from "./SignUp";
+import SygnUp from "./SignUp";
 
 const Login = () => {
     return (
@@ -7,8 +7,8 @@ const Login = () => {
             <h2>Aceso de Usuarios</h2>
             <LoginForm />
 
-            <h2>Si aún no estas registrado</h2>
-            {/* <SygnUp/> */}
+            <h2>Si aún no estas registrado:</h2>
+            <SygnUp/>
         </>
     );
 };

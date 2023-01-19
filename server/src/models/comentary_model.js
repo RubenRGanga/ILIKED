@@ -13,7 +13,7 @@ const comentariesSchema = new mongoose.Schema({
     n: Number,
     comentary_t: String,
     comentary: String,
-});
+}, { timestamps: true });
 
 function validateComentaries(comentaries){
     const schema = Joi.object({

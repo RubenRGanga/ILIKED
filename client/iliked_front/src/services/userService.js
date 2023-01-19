@@ -5,19 +5,21 @@ import config from "../config.json";
 const apiURL = config.apiURL;
 const tokenProperty = "token";
 
+http.setToken(getToken())
+
 async function login(user) {
-  const response = await http.post(apiURL + "/auths", {
-    ...user,
-  });
+  console.log(user)
+  const response = await http.post(apiURL + "/auths/login", user);
   const token = response.headers["x-auth-token"];
   localStorage.setItem(tokenProperty, token);
+  http.setToken(token)
 
   return jwt_decode(token);
 }
 
 function loginWithToken(token) {
   localStorage.setItem(tokenProperty, token);
-
+  http.setToken(token)
   return jwt_decode(token);
 }
 
@@ -26,11 +28,10 @@ function logout() {
 }
 
 async function register(user) {
-  const response = await http.post(apiURL + "/users", {
-    ...user,
-  });
+  const response = await http.post(apiURL + "/users",user);
   const token = response.headers["x-auth-token"];
   localStorage.setItem(tokenProperty, token);
+  http.setToken(token)
 
   return token;
 }
@@ -42,6 +43,10 @@ function getCurrentUser() {
   } catch (ex) {
     return null;
   }
+}
+
+function getToken() {
+  return localStorage.getItem(tokenProperty)
 }
 
 export default {

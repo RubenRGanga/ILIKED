@@ -22,7 +22,7 @@ router.get('/random/:n', async (req, res) => {
 });
 
 //CREAR NUEVA ENTRADA FILM
-router.post('/create', async (req, res) => {
+router.post('/create', auth, async (req, res) => {
     
     const film = new Films(req.body) 
     const newFilm = await film.save()
@@ -31,10 +31,12 @@ router.post('/create', async (req, res) => {
 })
 
 //CREAR UN NUEVO COMENTARIO EN FILMS
-router.put('/edit/:title', async (req, res) => {
-    // console.log(req.body)
+router.put('/edit/:title', auth, async (req, res) => {
 
-    const film = await Films.findOneAndUpdate({title: req.params.title}, {$push: {comments: req.body}})
+    const {_id: user_id, username} = req.user
+
+    const commentBody = {...req.body, user_id, username}
+    const film = await Films.findOneAndUpdate({title: req.params.title}, {$push: {comments: commentBody}})
   
 
     res.send(film)

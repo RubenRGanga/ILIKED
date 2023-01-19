@@ -40,7 +40,7 @@ const usersSchema = new mongoose.Schema({
 
 usersSchema.methods.generateToken = function () {
     return jwt.sign(
-      _.pick(this, ["_id", "name"]),
+      _.pick(this, ["_id", "username"]),
       config.get("jwtPrivateKey")
     );
   };

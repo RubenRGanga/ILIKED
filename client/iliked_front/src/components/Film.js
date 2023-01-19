@@ -30,7 +30,7 @@ const Film = () => {
         }
         getFilm()
         
-    })
+    }, [])
 
 
     return (
