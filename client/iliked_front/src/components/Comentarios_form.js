@@ -57,7 +57,8 @@ const Comentarios = (props) => {
       console.log(err);
     }
 
-    window.location.reload(true)
+    window.location.reload(true) //Actualiza a la vista de Pag comentada.
+    // navigate(-1) //Actualiza a la pagina anterior.
     
 
   };

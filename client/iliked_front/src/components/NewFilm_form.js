@@ -34,8 +34,8 @@ const NewFilm = () => {
     if (!title || !director || !year || !comentary_t || !comentary) return alert("Faltan datos por añadir.");
 
     const newComentary = {
-      user_id:"63b46ca5d438118df7e60aa1",
-      username:"Colector",
+      user_id:"63c406698739bc88f8b06a21",
+      username:"KrKID",
       date: new Date().toISOString(),
       comentary_t,
       comentary,

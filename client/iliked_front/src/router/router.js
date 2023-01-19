@@ -5,8 +5,9 @@ import {useParams} from 'react-router-dom'
 import PublicLayout from "../components/PublicLayout";
 import Home from "../components/Home";
 import NewFilm from "../components/NewFilm_form";
-// import Login from "../components/Login"
+import Login from "../components/Login"
 import Film from "../components/Film";
+
 
 
 const router = createBrowserRouter([
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
         path: "/newfilm",
         element: <NewFilm/>,
       },       
-      // {
-      //   path: "/login",
-      //   element: <Login/>,
-      // },
+      {
+        path: "/login",
+        element: <Login/>,
+      },
     ],
   },
 ]);
