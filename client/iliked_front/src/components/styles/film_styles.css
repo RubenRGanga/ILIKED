@@ -49,20 +49,42 @@
 
 .imdb{
     border-radius: 5%;
-    margin: 15px;
+    margin: 10px;
     height: auto;
     width: 50px;
     cursor: pointer;
-
-
 }
 
 .yt{
-    margin: 5px;
+    margin: 10px;
     height: auto;
     width: 50px;
     cursor: pointer
 
+}
+
+#añadirComentario{
+  /* margin-top: 5px; */
+  margin: 10px;
+  color: var(--miBlanco);
+  font-size: 2.5rem;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.iconos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  height: 50px;
+}
+
+#like{
+  color: var(--miBlanco);
+  font-size: 1.2rem;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .marcoComentarios{
@@ -105,13 +127,6 @@
 
 .comentario{
   font-size: 0.8rem;
-}
-
-#like{
-  color: var(--miBlanco);
-  font-size: 1.2rem;
-  gap: 5px;
-  cursor: pointer;
 }
 
 .popup-content {

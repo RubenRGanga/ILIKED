@@ -19,7 +19,7 @@
     display: none;
 }
 
-.input {
+.input_search {
     color: var(--miBlanco);
     border: 2px solid var(--miBlanco);
     border-radius: 10px;

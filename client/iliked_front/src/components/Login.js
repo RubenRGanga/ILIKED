@@ -1,6 +1,8 @@
 import LoginForm from "./LoginForm";
 import SygnUp from "./SignUp";
 
+import "./styles/FormLogin_styles.css"
+
 const Login = () => {
     return (
         <>

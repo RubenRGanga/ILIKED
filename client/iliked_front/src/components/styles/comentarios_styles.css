@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root{
+    --colorFondo: rgb(48,48,48);
+    --miPurpura: rgba(125,18,130,1);
+    --colorHover: rgba(45,25,50,1);
+    --colorlogo: rgb(183, 34, 94);
+    --miBlanco: #f1f1f1;
+    --miNegro: #212121;
+}
+
+.input {
+    min-width: 400px;
+    margin-left: 15px;
+    height: 44px;
+    background-color: #f1f1f1;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--colorFondo);
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input_area {
+    min-width: 520px;
+    min-height: 110px;
+    margin-left: 15px;
+    /* height: 44px; */
+    background-color: #f1f1f1;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--colorFondo);
+    text-align: left;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+  
+.label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: .3rem;
+    margin-left: 20px;
+    font-size: .9rem;
+    font-weight: bold;
+    color: var(--miBlanco);
+    font-family: 'Poppins', sans-serif;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+  
+.input:hover, .input:focus, .input-group:hover .input {
+    color: var(--miNegro);
+    outline: none;
+    border-color: #05060f;
+}
+  
+.label{
+    color: var(--miBlanco);
+}
+
+button {
+    border: none;
+    color: #f1f1f1;
+    background-image: linear-gradient(30deg, var(--colorlogo), var(--colorHover));
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+   
+button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+
+
+@keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+}
+   
+70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+}
+   
+100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+}}
+
+.formComents{
+    height: 300px;
+    width: 550px;
+
+    /* background-color: aqua; */
+}
+
+.comentario{
+    font-size: 0.8rem;
+  }
+  
+#submit1{
+    display: flex;
+    margin-left: 15px;
+}
+  

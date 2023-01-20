@@ -18,13 +18,16 @@ function Navbar() {
             <NavLink to="/"><img src={logo} className="App-logo" alt="I LIKED!"/></NavLink>
             <div id='cajaTexto'>
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
-                    <Search></Search>
-
-                    {auth.isAuth ? 
+                    
+                {auth.isAuth ? 
                         <li><NavLink to="/logout">LOGOUT</NavLink></li>
                         : 
                         <li><NavLink to="/login">LOGIN</NavLink></li> 
                     }
+                    
+                    <Search/>
+
+
                     
                     
                 </ul>

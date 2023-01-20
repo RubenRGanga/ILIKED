@@ -21,7 +21,7 @@ const Film = () => {
 
     useEffect(() => {
         const getFilm = async () => {
-            // console.log(routeParams)
+
 
             const resp = await fetch(`http://localhost:3000/films/search/${routeParams.title}`);
             const data = await resp.json();
@@ -43,28 +43,30 @@ const Film = () => {
                             <h2 className="titulo">{film.title.toUpperCase()}</h2>
                             <p className='line1'>({film.o_title}) Dirección: {film.director}, {film.year}</p>
                             <p className='line2'>Con: {film.cast.join(",  ")}</p>
-                            <Tooltip title="Ficha en IMDB" arrow>
-                                <a href={film.url_imdb} target="_blank" rel="noopener noreferrer">
-                                    <img className="imdb" src={imdb} alt="IMDB Logo"></img>
-                                </a>
-                            </Tooltip>
-                            <Popup trigger={<img className="yt" src={yt} alt="YouTube Logo"></img>} position="left center">
-                                <div className='popupVideo'>
-                                    <ReactPlayer
-                                    url={film.url_video}
-                                    className='react-player'
-                                    playing
-                                    width="640px"
-                                    height='360px'
-                                    controls
-                                    />
-                                </div>
-                            </Popup>
-                            <Popup trigger={<i className="fa-solid fa-comment-medical"></i>} position="left center">
-                                <div className='añadirComentario'>
-                                    <Comentarios titulo={film.title}></Comentarios>
-                                </div>
-                            </Popup>
+                            <div className='iconos'>
+                                <Tooltip title="Ficha en IMDB" arrow>
+                                    <a href={film.url_imdb} target="_blank" rel="noopener noreferrer">
+                                        <img className="imdb" src={imdb} alt="IMDB Logo"></img>
+                                    </a>
+                                </Tooltip>
+                                <Popup trigger={<img className="yt" src={yt} alt="YouTube Logo"></img>} position="left center">
+                                    <div className='popupVideo'>
+                                        <ReactPlayer
+                                        url={film.url_video}
+                                        className='react-player'
+                                        playing
+                                        width="640px"
+                                        height='360px'
+                                        controls
+                                        />
+                                    </div>
+                                </Popup>
+                                <Popup trigger={<i id='añadirComentario' className="fa-solid fa-comment-medical"></i>} position="left center">
+                                    <div className='añadirComentario'>
+                                        <Comentarios titulo={film.title}></Comentarios>
+                                    </div>
+                                </Popup>
+                            </div>
                             <div className="marcoComentarios">
                                 {film.comments.map((item, index) => (
                                     <div className='marco1Comentario' key={item._id}>

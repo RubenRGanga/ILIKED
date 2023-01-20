@@ -3,31 +3,26 @@ import axios from "axios";
 import { Link, useNavigate ,useParams} from 'react-router-dom';
 import AuthConsumer from "../hooks/useAuth";  
 
-import "./styles/nuevoFilm_styles.css"
+import "./styles/newFilm_styles.css"
 
 let apiEndpoint = `http://localhost:3000/films/create/`;
 
-const NewFilm = () => {
+const NewFilm = () => { 
 
+    const [user, dispatch] = AuthConsumer();
     const [title, setTitle] = useState("");
-    const [cast, setCast] = useState("");
-    const [o_title, setO_title] = useState("");
     const [director, setDirector] = useState("");
     const [year, setYear] = useState("");
     const [url_imdb, SetUrl_imdb] = useState("");
-    const [url_img, SetUrl_img] = useState("");
-    const [url_video, SetUrl_video] = useState("");
-    const [comments, SetComments] = useState(""); 
     const [user_id, setUser_id] = useState("");
     const [username, setUsername] = useState("");
-    const [date, setDate] = useState("");
     const [comentary_t, setComentary_t] = useState("");
     const [comentary, setComentary] = useState("");
     const [likes, setLikes] = useState("");
-    const [n, setN] = useState("");
     const navigate = useNavigate();
 
     const [auth] = AuthConsumer();
+
 
 
 
@@ -39,8 +34,8 @@ const NewFilm = () => {
     if (!title || !director || !year || !comentary_t || !comentary) return alert("Faltan datos por añadir.");
 
     const newComentary = {
-      user_id:"63c406698739bc88f8b06a21",
-      username:"KrKID",
+      // user_id:"63c406698739bc88f8b06a21",
+      // username:"KrKID",
       date: new Date().toISOString(),
       comentary_t,
       comentary,
@@ -76,10 +71,10 @@ const NewFilm = () => {
 
   return (
     <>
-    <p className="anuncio">LO SENTIMOS, AÚN NO TENEMOS ESA PELICULA EN LA PLATAFORMA,</p>
-    <p className="anuncio">ANIMATE A PARTICIPAR EN I LIKED! AÑADIENDOLA A CONTINUACIÓN: </p>
+    <h2 className="anuncio">LO SENTIMOS, AÚN NO TENEMOS ESA PELICULA EN LA PLATAFORMA,</h2>
+    <h2 className="anuncio2">ANIMATE A PARTICIPAR EN I LIKED! AÑADIENDOLA A CONTINUACIÓN: </h2>
     <form onSubmit={handleSubmit}>
-        <div className="form">
+        <div className="form_newfilm">
 
             <div className="input-group">
               <label htmlFor="exampleFormControlInput1"className="label">Titulo: </label>
@@ -152,7 +147,7 @@ const NewFilm = () => {
               onChange={(e) => setComentary(e.target.value)}/>
             </div>
         </div>
-            <button className="submit" type="submit"> I LIKED! </button>
+            <button className="submit_n" type="submit"> I LIKED! </button>
     </form>
   </>
   );

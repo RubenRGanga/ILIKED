@@ -21,7 +21,7 @@ const Home = () => {
     
     return (
       <>
-      <h2>CINE</h2> 
+      <h2 className='cineh2'>CINE</h2> 
       <div className="marcoRandon10">
 
         {films.map((item,index) => (

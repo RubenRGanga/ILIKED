@@ -17,7 +17,7 @@
     margin-right: 60px;
 }
 
-h2 {
+.cineh2, h2 {
     margin-left: 77px;
     margin-top: 2rem;
     font-size: 1.8rem;
@@ -49,4 +49,14 @@ h2 {
 
 .year{
     font-size: 0.8rem;
+}
+
+.cineh2{
+    text-align: left;
+    margin-left: 77px;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--miBlanco);
+    font-family: 'Shadows Into Light';
 }

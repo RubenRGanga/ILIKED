@@ -5,6 +5,7 @@ const express = require('express')
 const winston = require('winston')
 const router = express.Router()
 const auth = require ("../middleware/auth")
+const mongoose = require('mongoose')
 
 //VER TODO
 router.get('/all', async (req, res) => {
@@ -24,7 +25,14 @@ router.get('/random/:n', async (req, res) => {
 //CREAR NUEVA ENTRADA FILM
 router.post('/create', auth, async (req, res) => {
     
-    const film = new Films(req.body) 
+    const {_id: user_id, username} = req.user
+    winston.info(req.user)
+
+    const commentBody = {...req.body, user_id, username}
+    winston.info(commentBody)
+    // const film = new Films({commentBody, _id: new mongoose.Types.ObjectId()});
+    // const film = new Films({...req.body, ...commentBody});
+    const film = new Films({...req.body, _id: new mongoose.Types.ObjectId()}, {$push: {comments: commentBody}});
     const newFilm = await film.save()
     res.send(newFilm)
     winston.info('Nuevo pelicula añadida a la base de datos.')

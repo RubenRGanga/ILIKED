@@ -33,7 +33,7 @@ const Search = () => {
         <>
             <div>
                 <form className='search'>
-                    <input className="input" type= "text" onChange={handleSearch} />
+                    <input className="input_search" type= "text" onChange={handleSearch} />
                     <i id='lupa' onClick={searchFilm} className="fa-solid fa-magnifying-glass"></i>       
                 </form>
             </div>

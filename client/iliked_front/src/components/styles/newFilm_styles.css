@@ -1,0 +1,31 @@
+.anuncio{
+    text-align: center;
+}
+
+.anuncio2{
+    text-align: center;
+    margin-top: -10px;
+}
+
+*{
+    text-align: center;
+}
+
+.input-group{
+    margin-top: 5px;
+    display: flex;
+
+}
+
+.label{
+    width: 150px;
+    height: auto;
+}
+
+.submit_n{
+    margin: 30px;
+}
+
+.form_newfilm{
+    margin-left: 25%;
+}
