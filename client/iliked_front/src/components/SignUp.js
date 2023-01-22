@@ -31,9 +31,9 @@ const SignUp = () => {
   return (
     <Form
       inputs={[
-        { name: "username", label: "Nombre de Usuario" },
-        { name: "email", label: "e-mail" },
-        { name: "_password", label: "Contraseña", type: "password" },
+        { name: "username", label: "Nombre de Usuario:  " },
+        { name: "email", label: "e-mail:  " },
+        { name: "_password", label: "Contraseña:  ", type: "password" },
       ]}
       onSubmit={handleSubmit}
       header="Crear una cuenta"

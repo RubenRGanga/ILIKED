@@ -1,21 +1,20 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate ,useParams} from 'react-router-dom';
-import AuthConsumer from "../hooks/useAuth";  
+import { Link, useNavigate} from 'react-router-dom';
+import AuthConsumer from "../hooks/useAuth"; 
+import { toast } from "react-toastify";
 
 import "./styles/newFilm_styles.css"
 
-let apiEndpoint = `http://localhost:3000/films/create/`;
 
-const NewFilm = () => { 
+const NewFilm = (props) => { 
 
+    let apiEndpoint = `http://localhost:3000/films/create/`;
     const [user, dispatch] = AuthConsumer();
     const [title, setTitle] = useState("");
     const [director, setDirector] = useState("");
     const [year, setYear] = useState("");
     const [url_imdb, SetUrl_imdb] = useState("");
-    const [user_id, setUser_id] = useState("");
-    const [username, setUsername] = useState("");
     const [comentary_t, setComentary_t] = useState("");
     const [comentary, setComentary] = useState("");
     const [likes, setLikes] = useState("");
@@ -23,24 +22,16 @@ const NewFilm = () => {
 
     const [auth] = AuthConsumer();
 
-
-
-
-//   const routeParams = useParams()
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!title || !director || !year || !comentary_t || !comentary) return alert("Faltan datos por añadir.");
+    if (!title || !director || !year || !comentary_t || !comentary) toast.warning("Faltan datos por añadir.");
 
     const newComentary = {
-      // user_id:"63c406698739bc88f8b06a21",
-      // username:"KrKID",
       date: new Date().toISOString(),
       comentary_t,
       comentary,
       likes: 0,
-      n: 2
     };
 
     const newFilm = {
@@ -59,6 +50,7 @@ const NewFilm = () => {
     try {
       const { data } = await axios.post(apiEndpoint, newFilm);
       console.log(data);
+      toast.info("Comentario añadido.");
     } catch (err) {
       console.log(err);
     }
@@ -67,7 +59,7 @@ const NewFilm = () => {
 
   };
 
-  if(!auth.isAuth) return <p>Necesitas estar logueado <Link to="/login">login</Link></p>
+  if(!auth.isAuth) return <h2>Necesitas autentificación para añadir peliculas. <Link to="/login">login</Link></h2>
 
   return (
     <>

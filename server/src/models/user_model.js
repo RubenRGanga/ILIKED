@@ -13,7 +13,7 @@ const commentsSchema = new mongoose.Schema({
     comentary_t: String,
     comentary: String,
     date: Date,
-    likes: Number,
+    likes: Array,
     n: Number
 });
 

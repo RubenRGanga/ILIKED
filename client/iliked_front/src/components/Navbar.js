@@ -20,7 +20,7 @@ function Navbar() {
                 <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
                     
                 {auth.isAuth ? 
-                        <li><NavLink to="/logout">LOGOUT</NavLink></li>
+                        <li><NavLink to="/logout"><i className="fa-solid fa-right-to-bracket"></i></NavLink></li>
                         : 
                         <li><NavLink to="/login">LOGIN</NavLink></li> 
                     }

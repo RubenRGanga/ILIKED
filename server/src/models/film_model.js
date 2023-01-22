@@ -3,6 +3,16 @@
 const mongoose = require('mongoose');
 const Joi = require('joi')
 
+//Añadido por si tenia que ver con guardar El user al crear nueva pelicula
+
+const config = require("config");
+const jwt = require("jsonwebtoken");
+const validator = require("../middleware/joiValidator");
+const _ = require("lodash");
+
+ //Fin de lo añadido 
+
+
 const commentsSchema = new mongoose.Schema({
     user_id: String, 
     username: String,
@@ -15,8 +25,8 @@ const commentsSchema = new mongoose.Schema({
         required: true,
     },
     date: Date,
-    likes: Number,
-    n: Number
+    likes: Array,
+
 })
 
 const filmsSchema = new mongoose.Schema({
@@ -38,6 +48,17 @@ const filmsSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
+//Añadido por si tenia que ver con guardar El user al crear nueva pelicula
+
+filmsSchema.methods.generateToken = function () {
+    return jwt.sign(
+      _.pick(this, ["_id", "username"]),
+      config.get("jwtPrivateKey")
+    );
+  };
+
+ //Fin de lo añadido 
+
 function validateComments(comments){
     const schema = Joi.object({
     user_id: Joi.string(), 
@@ -45,7 +66,7 @@ function validateComments(comments){
     comentary_t: Joi.string(),
     comentary: Joi.string(),
     date: Joi.date(),
-    likes: Joi.number()
+    likes: Joi.array()
     })
 
     return schema.validate(comments)

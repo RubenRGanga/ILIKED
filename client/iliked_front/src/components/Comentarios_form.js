@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate ,useParams} from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 import AuthConsumer from "../hooks/useAuth";
 import { toast } from "react-toastify";
 
@@ -18,7 +18,7 @@ const Comentarios = (props) => {
   const [n, setN] = useState("");
   const navigate = useNavigate()
 
-  const routeParams = useParams()
+  const [auth] = AuthConsumer();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,19 +29,21 @@ const Comentarios = (props) => {
       date: new Date().toISOString(),
       comentary_t,
       comentary,
-      likes: 0,
+      likes: [],
     };
 
     try {
       const { data } = await axios.put(apiEndpoint, newComentary);
-      console.log(data);
+      console.log(user.id);
       navigate(0)
-      toast.info("Comentario añadido.");
+      toast.info(`Comentario añadido por ${user.id.username}.`);
     } catch (err) {
       console.log(err);
     }
 
   };
+
+  if(!auth.isAuth) return <h2>Necesitas autentificación para añadir cometarios. <Link to="/login">Login</Link></h2>
 
   return (
     <>

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import {useParams, routeParams} from 'react-router-dom'
 import { Tooltip } from '@mui/material';
 import Popup from 'reactjs-popup';
+import axios from "axios";
+import AuthConsumer from "../hooks/useAuth";
 
 
 import 'reactjs-popup/dist/index.css';
@@ -18,14 +20,12 @@ import Comentarios from './Comentarios_form';
 const Film = () => {
     const [film, setFilm] = useState(null);
     const routeParams = useParams()
+    const [user, dispatch] = AuthConsumer();
 
     useEffect(() => {
         const getFilm = async () => {
-
-
-            const resp = await fetch(`http://localhost:3000/films/search/${routeParams.title}`);
-            const data = await resp.json();
-
+            const { data } = await axios.get(`http://localhost:3000/films/search/${routeParams.title}`);
+    
             setFilm(data)
         }
         getFilm()
@@ -40,7 +40,7 @@ const Film = () => {
                 <div className="marcoFilm" key={film._id}>
                         <img className='imgfilm' src={film.url_img} alt={film.title}></img>
                         <div className="marcoInfo">
-                            <h2 className="titulo">{film.title.toUpperCase()}</h2>
+                            <h2 className="tituloFilm">{film.title.toUpperCase()}</h2>
                             <p className='line1'>({film.o_title}) Dirección: {film.director}, {film.year}</p>
                             <p className='line2'>Con: {film.cast.join(",  ")}</p>
                             <div className='iconos'>
@@ -72,8 +72,8 @@ const Film = () => {
                                     <div className='marco1Comentario' key={item._id}>
                                         <p className='tituloComentario'>{item.comentary_t}</p>
                                         <p className='autor'>Autor:  {item.username}</p>
-                                        <p className='comentario'>{item.comentary}</p>
-                                        <i id='like' className="fa-solid fa-heart-circle-plus"></i> {item.likes}
+                                        <p className='comentarioFilm'>{item.comentary}</p>
+                                        <i id='like' className="fa-solid fa-heart-circle-plus"></i> {item.likes.length}
                                     </div>
                                     
                                 ))}

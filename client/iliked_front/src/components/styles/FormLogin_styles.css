@@ -1,3 +1,20 @@
-.label{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.formLogin{
+    text-align: end;
+    margin-right: 41%;
+}
+
+label{
     width: 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    width: 200px;
+}
+
+button .formLogin{
+    margin-top: 10px;
 }

@@ -30,8 +30,8 @@ const LoginForm = () => {
   return (
     <Form
       inputs={[
-        { name: "username", label: "Nombre de Usuario:", type: "text"},
-        { name: "_password", label: "Contraseña", type: "password" },
+        { name: "username", label: "Nombre de Usuario:  ", type: "text"},
+        { name: "_password", label: "Contraseña:  ", type: "password" },
       ]}
       onSubmit={handleSubmit}
       header="Acceso de Usuarios"

@@ -15,10 +15,6 @@
 
 }
 
-.select{
-    display: none;
-}
-
 .input_search {
     color: var(--miBlanco);
     border: 2px solid var(--miBlanco);
@@ -37,3 +33,15 @@
     cursor: pointer;
 }
    
+@media screen and (max-width: 769px){
+    
+    #lupa{
+        position: relative;
+        color: var(--miBlanco);
+        top: -26px;
+        left: 5px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+  }

@@ -31,11 +31,10 @@ router.post('/create', auth, async (req, res) => {
     const commentBody = {...req.body, user_id, username}
     winston.info(commentBody)
     // const film = new Films({commentBody, _id: new mongoose.Types.ObjectId()});
-    // const film = new Films({...req.body, ...commentBody});
-    const film = new Films({...req.body, _id: new mongoose.Types.ObjectId()}, {$push: {comments: commentBody}});
+    const film = new Films({...req.body, commentBody});
     const newFilm = await film.save()
     res.send(newFilm)
-    winston.info('Nuevo pelicula añadida a la base de datos.')
+    winston.info('Nueva pelicula añadida a la base de datos.')
 })
 
 //CREAR UN NUEVO COMENTARIO EN FILMS
