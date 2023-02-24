@@ -1,0 +1,52 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "iLiked_request",
+    "dateExported": "2023-02-24T11:52:38.746Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "352b873b-64e6-4d29-929a-571a8db6b4b5",
+            "colId": "7fa5e75f-83b4-42b2-ad87-2098a24a54b0",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/auths/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-01-11T15:38:16.049Z",
+            "modified": "2023-02-24T11:51:54.491Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I0NmNhNWQ0MzgxMThkZjdlNjBhYTEiLCJpYXQiOjE2NzQxNTI3MzV9.pSsczux5F7YER3XzfMikbDNFHO408Di2NWumtdfTgJA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"prueba\",\n  \"_password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5911e7c1-c169-4c7e-813a-150ce5a286fe",
+            "colId": "7fa5e75f-83b4-42b2-ad87-2098a24a54b0",
+            "containerId": "",
+            "name": "Nuevo Usuario",
+            "url": "http://localhost:3000/users/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-24T11:12:21.051Z",
+            "modified": "2023-02-24T11:20:18.954Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"prueba\",\n  \"email\": \"prueba@prueba.es\",\n  \"_password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

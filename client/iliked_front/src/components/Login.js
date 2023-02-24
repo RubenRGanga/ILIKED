@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <>
         <div className="formLogin">
-            <h2>Aceso de Usuarios</h2>
+            <h2>Acceso de Usuarios</h2>
             <LoginForm />
 
             <h2>Si aún no estas registrado:</h2>

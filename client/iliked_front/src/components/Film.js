@@ -6,7 +6,7 @@ import { Tooltip } from '@mui/material';
 import Popup from 'reactjs-popup';
 import axios from "axios";
 import AuthConsumer from "../hooks/useAuth";
-
+import Likes from './Likes';
 
 import 'reactjs-popup/dist/index.css';
 
@@ -25,7 +25,7 @@ const Film = () => {
     useEffect(() => {
         const getFilm = async () => {
             const { data } = await axios.get(`http://localhost:3000/films/search/${routeParams.title}`);
-    
+            console.log(data)
             setFilm(data)
         }
         getFilm()
@@ -73,7 +73,7 @@ const Film = () => {
                                         <p className='tituloComentario'>{item.comentary_t}</p>
                                         <p className='autor'>Autor:  {item.username}</p>
                                         <p className='comentarioFilm'>{item.comentary}</p>
-                                        <i id='like' className="fa-solid fa-heart-circle-plus"></i> {item.likes.length}
+                                        <Likes commentId={item._id} /> {item.likes.length}
                                     </div>
                                     
                                 ))}

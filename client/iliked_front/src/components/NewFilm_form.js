@@ -30,8 +30,7 @@ const NewFilm = (props) => {
     const newComentary = {
       date: new Date().toISOString(),
       comentary_t,
-      comentary,
-      likes: 0,
+      comentary
     };
 
     const newFilm = {

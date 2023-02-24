@@ -28,7 +28,7 @@ function logout() {
 }
 
 async function register(user) {
-  const response = await http.post(apiURL + "/users",user);
+  const response = await http.post(apiURL + "/users/create",user);
   const token = response.headers["x-auth-token"];
   localStorage.setItem(tokenProperty, token);
   http.setToken(token)

@@ -25,7 +25,7 @@ const commentsSchema = new mongoose.Schema({
         required: true,
     },
     date: Date,
-    likes: Array,
+    likes: [{type: mongoose.Schema.Types.ObjectId, ref: 'Users'}],
 
 })
 

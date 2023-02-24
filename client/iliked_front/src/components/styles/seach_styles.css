@@ -23,8 +23,13 @@
     background: transparent;
     max-width: 190px;
 }
+
+/* .botonSearch{
+    display: none;
+} */
    
 #lupa{
+
     position: relative;
     color: var(--miBlanco);
     top: 4px;

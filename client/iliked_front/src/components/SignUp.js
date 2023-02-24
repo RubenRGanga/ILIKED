@@ -22,7 +22,7 @@ const SignUp = () => {
       const { isAdmin } = user.loginWithToken(jwt);
 
       dispatch({ type: isAdmin ? "admin" : "login"});
-      navigate(-1);
+      // navigate(-1);
     } catch (err) {
       if (err.response.status === 400) toast.error(err.response.data);
     }
