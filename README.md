@@ -5,7 +5,7 @@
 
 -INFORMACIÓN TECNICA :<br>
 
-ILIKED es una aplicación WEB con componente social, construida en el stack MERN desde Rubén R. Ganga, consumiendo una API propia 
+ILIKED es una aplicación WEB con componente social, construida en el stack MERN por Rubén R. Ganga, consumiendo una API propia 
 creada explícitamente para el proyecto y a la vez utilizando recursos de otras webs como Youtube, IMDB o Spotify y Discogs en un futuro.
 Su completa base de datos esta diseñada desde cero en MongoDB, construida con Node.js, Express y React Router en su ultima versión.
 Con opción de registrar y logear a los usuarios de forma segura gracias a la encriptación de la información de usuario. 
